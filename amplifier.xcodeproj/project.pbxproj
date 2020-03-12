@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4256CEE228E56A249C71BFFD /* Pods_amplifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3813847205C76071C4A2BD /* Pods_amplifier.framework */; };
 		8612DC2E241A24EC0014DF09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8612DC2D241A24EC0014DF09 /* AppDelegate.m */; };
 		8612DC34241A24EC0014DF09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8612DC33241A24EC0014DF09 /* ViewController.m */; };
 		8612DC37241A24EC0014DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC35241A24EC0014DF09 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 		8612DC3B241A24F00014DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8612DC3D241A24F00014DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8612DC3E241A24F00014DF09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8F3813847205C76071C4A2BD /* Pods_amplifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amplifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8A33D2917FF96DDF6F3C39 /* Pods-amplifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplifier.release.xcconfig"; path = "Target Support Files/Pods-amplifier/Pods-amplifier.release.xcconfig"; sourceTree = "<group>"; };
+		B9CC970CBDE5DC5FC07D21C7 /* Pods-amplifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplifier.debug.xcconfig"; path = "Target Support Files/Pods-amplifier/Pods-amplifier.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4256CEE228E56A249C71BFFD /* Pods_amplifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		556C9E09FF377C8D642E6CB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9CC970CBDE5DC5FC07D21C7 /* Pods-amplifier.debug.xcconfig */,
+				AD8A33D2917FF96DDF6F3C39 /* Pods-amplifier.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		59EDBD5E052BB2E7DF60130C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F3813847205C76071C4A2BD /* Pods_amplifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8612DC20241A24EC0014DF09 = {
 			isa = PBXGroup;
 			children = (
 				8612DC2B241A24EC0014DF09 /* amplifier */,
 				8612DC2A241A24EC0014DF09 /* Products */,
+				556C9E09FF377C8D642E6CB0 /* Pods */,
+				59EDBD5E052BB2E7DF60130C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8612DC42241A24F00014DF09 /* Build configuration list for PBXNativeTarget "amplifier" */;
 			buildPhases = (
+				7B7420C5679FCBDE8BD2A32B /* [CP] Check Pods Manifest.lock */,
 				8612DC25241A24EC0014DF09 /* Sources */,
 				8612DC26241A24EC0014DF09 /* Frameworks */,
 				8612DC27241A24EC0014DF09 /* Resources */,
+				A4CF640A046849DB588F18D2 /* [CP] Embed Pods Frameworks */,
+				DA34F34570083B103C463CD3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +163,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B7420C5679FCBDE8BD2A32B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-amplifier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4CF640A046849DB588F18D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-amplifier/Pods-amplifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-amplifier/Pods-amplifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-amplifier/Pods-amplifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA34F34570083B103C463CD3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-amplifier/Pods-amplifier-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-amplifier/Pods-amplifier-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-amplifier/Pods-amplifier-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8612DC25241A24EC0014DF09 /* Sources */ = {
@@ -281,6 +368,7 @@
 		};
 		8612DC43241A24F00014DF09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9CC970CBDE5DC5FC07D21C7 /* Pods-amplifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +386,7 @@
 		};
 		8612DC44241A24F00014DF09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD8A33D2917FF96DDF6F3C39 /* Pods-amplifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
