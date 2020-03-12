@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,27 @@
 		8612DC39241A24F00014DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC38241A24F00014DF09 /* Assets.xcassets */; };
 		8612DC3C241A24F00014DF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC3A241A24F00014DF09 /* LaunchScreen.storyboard */; };
 		8612DC3F241A24F00014DF09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8612DC3E241A24F00014DF09 /* main.m */; };
+		8612DC52241A48430014DF09 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4D241A45410014DF09 /* AipOcrSdk.framework */; };
+		8612DC53241A48430014DF09 /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4D241A45410014DF09 /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8612DC55241A48470014DF09 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4C241A45410014DF09 /* AipBase.framework */; };
+		8612DC56241A48470014DF09 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4C241A45410014DF09 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8612DC5A241A4A030014DF09 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC59241A4A030014DF09 /* 1.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8612DC54241A48430014DF09 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8612DC56241A48470014DF09 /* AipBase.framework in Embed Frameworks */,
+				8612DC53241A48430014DF09 /* AipOcrSdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8612DC29241A24EC0014DF09 /* amplifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amplifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +47,11 @@
 		8612DC3B241A24F00014DF09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8612DC3D241A24F00014DF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8612DC3E241A24F00014DF09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8612DC45241A44880014DF09 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AipBase.framework; path = ../../Downloads/AipBase.framework; sourceTree = "<group>"; };
+		8612DC49241A44A10014DF09 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AipOcrSdk.framework; path = ../../Downloads/AipOcrSdk.framework; sourceTree = "<group>"; };
+		8612DC4C241A45410014DF09 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
+		8612DC4D241A45410014DF09 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
+		8612DC59241A4A030014DF09 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		8F3813847205C76071C4A2BD /* Pods_amplifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amplifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8A33D2917FF96DDF6F3C39 /* Pods-amplifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplifier.release.xcconfig"; path = "Target Support Files/Pods-amplifier/Pods-amplifier.release.xcconfig"; sourceTree = "<group>"; };
 		B9CC970CBDE5DC5FC07D21C7 /* Pods-amplifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplifier.debug.xcconfig"; path = "Target Support Files/Pods-amplifier/Pods-amplifier.debug.xcconfig"; sourceTree = "<group>"; };
@@ -37,7 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8612DC55241A48470014DF09 /* AipBase.framework in Frameworks */,
 				4256CEE228E56A249C71BFFD /* Pods_amplifier.framework in Frameworks */,
+				8612DC52241A48430014DF09 /* AipOcrSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,13 +77,14 @@
 				B9CC970CBDE5DC5FC07D21C7 /* Pods-amplifier.debug.xcconfig */,
 				AD8A33D2917FF96DDF6F3C39 /* Pods-amplifier.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		59EDBD5E052BB2E7DF60130C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8612DC49241A44A10014DF09 /* AipOcrSdk.framework */,
+				8612DC45241A44880014DF09 /* AipBase.framework */,
 				8F3813847205C76071C4A2BD /* Pods_amplifier.framework */,
 			);
 			name = Frameworks;
@@ -83,10 +111,13 @@
 		8612DC2B241A24EC0014DF09 /* amplifier */ = {
 			isa = PBXGroup;
 			children = (
+				8612DC4C241A45410014DF09 /* AipBase.framework */,
+				8612DC4D241A45410014DF09 /* AipOcrSdk.framework */,
 				8612DC2C241A24EC0014DF09 /* AppDelegate.h */,
 				8612DC2D241A24EC0014DF09 /* AppDelegate.m */,
 				8612DC32241A24EC0014DF09 /* ViewController.h */,
 				8612DC33241A24EC0014DF09 /* ViewController.m */,
+				8612DC59241A4A030014DF09 /* 1.png */,
 				8612DC35241A24EC0014DF09 /* Main.storyboard */,
 				8612DC38241A24F00014DF09 /* Assets.xcassets */,
 				8612DC3A241A24F00014DF09 /* LaunchScreen.storyboard */,
@@ -109,6 +140,7 @@
 				8612DC27241A24EC0014DF09 /* Resources */,
 				A4CF640A046849DB588F18D2 /* [CP] Embed Pods Frameworks */,
 				DA34F34570083B103C463CD3 /* [CP] Copy Pods Resources */,
+				8612DC54241A48430014DF09 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8612DC5A241A4A030014DF09 /* 1.png in Resources */,
 				8612DC3C241A24F00014DF09 /* LaunchScreen.storyboard in Resources */,
 				8612DC39241A24F00014DF09 /* Assets.xcassets in Resources */,
 				8612DC37241A24EC0014DF09 /* Main.storyboard in Resources */,
@@ -372,13 +405,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/amplifier",
+				);
 				INFOPLIST_FILE = amplifier/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nov.app.amplifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangji.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -390,13 +427,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/amplifier",
+				);
 				INFOPLIST_FILE = amplifier/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nov.app.amplifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangji.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
