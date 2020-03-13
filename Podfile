@@ -40,8 +40,6 @@ target 'amplifier' do
     
     pod 'Toast'
     
-    pod 'CWLateralSlide'
-    
     
     pod 'NOVAdKit/Core'
     pod 'NOVAdKit/GDT'
@@ -50,6 +48,9 @@ target 'amplifier' do
 
     pod 'UMCAnalytics'
     pod 'UMCCommonLog', :configurations => ['Debug']
+    
+    
+    pod 'GPUImage'
     
 end
 
