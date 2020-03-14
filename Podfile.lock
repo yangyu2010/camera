@@ -20,6 +20,7 @@ PODS:
   - GDTMobSDK/GDTMobSDK (4.11.5)
   - GPUImage (0.1.7)
   - MBProgressHUD (1.2.0)
+  - MJRefresh (3.3.1)
   - MJUtils (0.1.1):
     - ModuleCapability (~> 0.1.2)
   - ModuleCapability (0.1.7)
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - AFNetworking
   - GPUImage
   - MBProgressHUD
+  - MJRefresh
   - MJUtils
   - NOVAdKit/ByteDance
   - NOVAdKit/Core
@@ -80,6 +82,7 @@ SPEC REPOS:
     - GDTMobSDK
     - GPUImage
     - MBProgressHUD
+    - MJRefresh
     - MJUtils
     - ModuleCapability
     - SDWebImage
@@ -99,6 +102,7 @@ SPEC CHECKSUMS:
   GDTMobSDK: da0cfe597627720b69889314091964ca2f3ae1e5
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   MJUtils: 0e1d68b753e897b89e4b3f2b1ef28b5993216fee
   ModuleCapability: c9d20a2f6070d9315531a94d51b1551a070662b6
   NOVAdKit: 61fe9437f6bfbce407d559188d55f6680244b53c
@@ -111,6 +115,6 @@ SPEC CHECKSUMS:
   UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
   UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
 
-PODFILE CHECKSUM: 629cdcc82484a0c93ed8a9b9b636284227301161
+PODFILE CHECKSUM: d608e56c7245adcba8772419c0a0c7acfedf884b
 
 COCOAPODS: 1.8.4

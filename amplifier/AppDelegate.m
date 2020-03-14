@@ -10,7 +10,6 @@
 #import <UserNotifications/UserNotifications.h>
 #import <UIColor+Utils.h>
 #import <Toast.h>
-#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 

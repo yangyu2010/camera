@@ -51,7 +51,8 @@ target 'amplifier' do
     
     
     pod 'GPUImage'
-    
+    pod 'MJRefresh'
+
 end
 
 #post_install do |installer_representation|

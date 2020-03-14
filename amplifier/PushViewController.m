@@ -9,6 +9,8 @@
 #import "PushViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import <UIColor+Utils.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <Toast.h>
 
 @interface PushViewController ()
 
@@ -32,6 +34,32 @@
 
 - (IBAction)action:(id)sender {
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    // 超时时间
+    manager.requestSerializer.timeoutInterval = 30.0f;
+    // 设置请求头
+    [manager.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
+    // 设置接收的Content-Type
+    manager.responseSerializer.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/jso2n",@"text/plain",nil];
+    
+    NSDictionary *dict = @{};
+    
+    [manager POST:@"http://94.191.30.13/notification/send" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+//        if ([responseObject[@"code"] integerValue] == 0) {
+//            self.arrDatas = responseObject[@"res"];
+//            [self.collectionView reloadData];
+//        } else {
+//            [self.view makeToast:responseObject[@"msg"]];
+//        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+
+    }];
 }
 
 /*
