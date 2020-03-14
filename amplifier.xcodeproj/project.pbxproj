@@ -41,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8610CF49241CC035004147BF /* amplifier.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = amplifier.entitlements; sourceTree = "<group>"; };
 		8612DC29241A24EC0014DF09 /* amplifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amplifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8612DC2C241A24EC0014DF09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8612DC2D241A24EC0014DF09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		8612DC2B241A24EC0014DF09 /* amplifier */ = {
 			isa = PBXGroup;
 			children = (
+				8610CF49241CC035004147BF /* amplifier.entitlements */,
 				8612DC4C241A45410014DF09 /* AipBase.framework */,
 				8612DC4D241A45410014DF09 /* AipOcrSdk.framework */,
 				8612DC2C241A24EC0014DF09 /* AppDelegate.h */,
@@ -426,6 +428,7 @@
 			baseConfigurationReference = B9CC970CBDE5DC5FC07D21C7 /* Pods-amplifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = amplifier/amplifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +451,7 @@
 			baseConfigurationReference = AD8A33D2917FF96DDF6F3C39 /* Pods-amplifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = amplifier/amplifier.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
