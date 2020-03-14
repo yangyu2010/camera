@@ -19,6 +19,8 @@
 		8612DC55241A48470014DF09 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4C241A45410014DF09 /* AipBase.framework */; };
 		8612DC56241A48470014DF09 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4C241A45410014DF09 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8612DC5A241A4A030014DF09 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC59241A4A030014DF09 /* 1.png */; };
+		86DFAC3D241C8FA100D9B8B7 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DFAC3C241C8FA100D9B8B7 /* PushViewController.m */; };
+		86DFAC40241C8FAC00D9B8B7 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DFAC3F241C8FAC00D9B8B7 /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,10 @@
 		8612DC4C241A45410014DF09 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
 		8612DC4D241A45410014DF09 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		8612DC59241A4A030014DF09 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		86DFAC3B241C8FA100D9B8B7 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		86DFAC3C241C8FA100D9B8B7 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		86DFAC3E241C8FAC00D9B8B7 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		86DFAC3F241C8FAC00D9B8B7 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		8F3813847205C76071C4A2BD /* Pods_amplifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amplifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8A33D2917FF96DDF6F3C39 /* Pods-amplifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplifier.release.xcconfig"; path = "Target Support Files/Pods-amplifier/Pods-amplifier.release.xcconfig"; sourceTree = "<group>"; };
 		B9CC970CBDE5DC5FC07D21C7 /* Pods-amplifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplifier.debug.xcconfig"; path = "Target Support Files/Pods-amplifier/Pods-amplifier.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +123,10 @@
 				8612DC2D241A24EC0014DF09 /* AppDelegate.m */,
 				8612DC32241A24EC0014DF09 /* ViewController.h */,
 				8612DC33241A24EC0014DF09 /* ViewController.m */,
+				86DFAC3B241C8FA100D9B8B7 /* PushViewController.h */,
+				86DFAC3C241C8FA100D9B8B7 /* PushViewController.m */,
+				86DFAC3E241C8FAC00D9B8B7 /* ListViewController.h */,
+				86DFAC3F241C8FAC00D9B8B7 /* ListViewController.m */,
 				8612DC59241A4A030014DF09 /* 1.png */,
 				8612DC35241A24EC0014DF09 /* Main.storyboard */,
 				8612DC38241A24F00014DF09 /* Assets.xcassets */,
@@ -261,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86DFAC40241C8FAC00D9B8B7 /* ListViewController.m in Sources */,
 				8612DC34241A24EC0014DF09 /* ViewController.m in Sources */,
 				8612DC2E241A24EC0014DF09 /* AppDelegate.m in Sources */,
+				86DFAC3D241C8FA100D9B8B7 /* PushViewController.m in Sources */,
 				8612DC3F241A24F00014DF09 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

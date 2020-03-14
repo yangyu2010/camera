@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KaA-0T-bhi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -53,8 +53,118 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PaN-FM-MiG">
+            <objects>
+                <tabBarController id="KaA-0T-bhi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N9N-x8-xot">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WbX-wj-Xbw" kind="relationship" relationship="viewControllers" id="ryP-I1-BVz"/>
+                        <segue destination="sNq-4K-ZBj" kind="relationship" relationship="viewControllers" id="yb4-iA-fNE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxp-eh-Pzq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="1318"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="Fp0-bd-LnY">
+            <objects>
+                <navigationController id="sNq-4K-ZBj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="IMG_2887(20200314-114115)" id="V3i-cX-Gi9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yd4-9f-ddp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ijN-cf-eoN" kind="relationship" relationship="rootViewController" id="FMy-4F-zJf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzF-c4-1Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="2064"/>
+        </scene>
+        <!--Notification List-->
+        <scene sceneID="ezA-ir-Uea">
+            <objects>
+                <viewController id="ijN-cf-eoN" customClass="ListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VCr-sf-Dm4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VjT-gs-JTq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notification List" id="9uQ-Ao-YO7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baH-Pw-7wI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="2128"/>
+        </scene>
+        <!--Sent-->
+        <scene sceneID="b2N-kT-BVN">
+            <objects>
+                <navigationController id="WbX-wj-Xbw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sent" image="IMG_2886(20200314-114113)" id="tQh-u0-EeR">
+                        <color key="badgeColor" red="0.99215686270000003" green="0.58823529409999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NWQ-9U-c6B">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M3z-qz-1xy" kind="relationship" relationship="rootViewController" id="Bmk-HI-a2m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHW-o2-GvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="1219"/>
+        </scene>
+        <!--Notification-->
+        <scene sceneID="XUP-WP-WwK">
+            <objects>
+                <viewController id="M3z-qz-1xy" customClass="PushViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Ui-oU-Q1E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkW-HI-pTs">
+                                <rect key="frame" x="132" y="235" width="150" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Ubz-Rh-rUe"/>
+                                    <constraint firstAttribute="width" constant="150" id="mav-bw-0s6"/>
+                                </constraints>
+                                <state key="normal" title="Send Notification">
+                                    <color key="titleColor" red="0.8784313725490196" green="0.0" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="action:" destination="M3z-qz-1xy" eventType="touchUpInside" id="L0U-OT-YjD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RkW-HI-pTs" firstAttribute="top" secondItem="x5s-Bv-mNW" secondAttribute="top" constant="147" id="H2z-Ah-xVg"/>
+                            <constraint firstItem="RkW-HI-pTs" firstAttribute="centerX" secondItem="x5s-Bv-mNW" secondAttribute="centerX" id="RfQ-PX-SWw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x5s-Bv-mNW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notification" id="m2n-yg-QTh"/>
+                    <connections>
+                        <outlet property="btn" destination="RkW-HI-pTs" id="w9b-sj-0A6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQz-XM-aFP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="1242"/>
+        </scene>
     </scenes>
     <resources>
         <image name="444" width="3024" height="4032"/>
+        <image name="IMG_2886(20200314-114113)" width="16" height="16"/>
+        <image name="IMG_2887(20200314-114115)" width="16" height="16"/>
     </resources>
 </document>
