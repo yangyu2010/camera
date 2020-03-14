@@ -33,19 +33,22 @@
 }
 
 - (IBAction)action:(id)sender {
+    NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"deviceToken"];
+
+    if (token.length == 0) {
+        [self.view makeToast:@"设备token未获取到, 不能推送!"];
+        return;
+    }
+    
+//    NSString *token = @"abc";
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    // 超时时间
-    manager.requestSerializer.timeoutInterval = 30.0f;
-    // 设置请求头
-    [manager.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
-    // 设置接收的Content-Type
-    manager.responseSerializer.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/jso2n",@"text/plain",nil];
-    
-    NSDictionary *dict = @{};
+    NSDictionary *dict = @{
+        @"token": token,
+    };
     
     [manager POST:@"http://94.191.30.13/notification/send" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -55,9 +58,10 @@
 //        } else {
 //            [self.view makeToast:responseObject[@"msg"]];
 //        }
-        
+        [self.view makeToast:responseObject[@"enMsg"]];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self.view makeToast:error.localizedDescription];
 
     }];
 }

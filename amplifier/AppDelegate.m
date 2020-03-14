@@ -46,6 +46,8 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
+    NSString *token = [[NSString alloc] initWithData:deviceToken encoding:NSUTF8StringEncoding];
+    [[NSUserDefaults standardUserDefaults] setValue:token forKey:@"deviceToken"];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
