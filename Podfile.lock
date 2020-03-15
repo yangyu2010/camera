@@ -19,6 +19,9 @@ PODS:
     - GDTMobSDK/GDTMobSDK (= 4.11.5)
   - GDTMobSDK/GDTMobSDK (4.11.5)
   - GPUImage (0.1.7)
+  - JCore (2.2.2)
+  - JPush (3.3.0):
+    - JCore (< 3.0.0, >= 2.0.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.3.1)
   - MJUtils (0.1.1):
@@ -63,6 +66,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - GPUImage
+  - JPush
   - MBProgressHUD
   - MJRefresh
   - MJUtils
@@ -81,6 +85,8 @@ SPEC REPOS:
     - Bytedance-UnionAD
     - GDTMobSDK
     - GPUImage
+    - JCore
+    - JPush
     - MBProgressHUD
     - MJRefresh
     - MJUtils
@@ -101,6 +107,8 @@ SPEC CHECKSUMS:
   Bytedance-UnionAD: 289dd37fe5378e49143a5918e2ef464e102a7243
   GDTMobSDK: da0cfe597627720b69889314091964ca2f3ae1e5
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  JCore: 2e6690b41b1b59c4a768e0a3187c311911c02ca8
+  JPush: 65cd9d8cb050b6d8c95736517d846fac2f53c134
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   MJUtils: 0e1d68b753e897b89e4b3f2b1ef28b5993216fee
@@ -115,6 +123,6 @@ SPEC CHECKSUMS:
   UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
   UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
 
-PODFILE CHECKSUM: d608e56c7245adcba8772419c0a0c7acfedf884b
+PODFILE CHECKSUM: 5def069c205a0ed66d8fad646c1abe395445ad86
 
 COCOAPODS: 1.8.4

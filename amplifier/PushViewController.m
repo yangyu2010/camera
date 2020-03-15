@@ -12,6 +12,10 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Toast.h>
 
+
+#import "JPUSHService.h"
+
+
 @interface PushViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *btn;
@@ -33,21 +37,24 @@
 }
 
 - (IBAction)action:(id)sender {
-    NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"deviceToken"];
+//    NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"deviceToken"];
+//
+//    NSString *token = @"111111";
+    NSString *token = [JPUSHService registrationID];
+    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
 
+    }];
     if (token.length == 0) {
-        [self.view makeToast:@"设备token未获取到, 不能推送!"];
+        [self.view makeToast:@"设备registrationID未获取到, 不能推送!"];
         return;
     }
-    
-//    NSString *token = @"abc";
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSDictionary *dict = @{
-        @"token": token,
+        @"registrationId": token,
     };
     
     [manager POST:@"http://94.191.30.13/notification/send" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

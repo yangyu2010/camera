@@ -52,6 +52,7 @@ target 'amplifier' do
     
     pod 'GPUImage'
     pod 'MJRefresh'
+    pod 'JPush'
 
 end
 
