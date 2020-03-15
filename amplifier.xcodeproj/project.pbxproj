@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4256CEE228E56A249C71BFFD /* Pods_amplifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3813847205C76071C4A2BD /* Pods_amplifier.framework */; };
+		8610CF4E241DC1B9004147BF /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610CF4D241DC1B9004147BF /* CameraViewController.m */; };
+		8610CF51241DC638004147BF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8610CF50241DC638004147BF /* BaseViewController.m */; };
 		8612DC2E241A24EC0014DF09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8612DC2D241A24EC0014DF09 /* AppDelegate.m */; };
 		8612DC34241A24EC0014DF09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8612DC33241A24EC0014DF09 /* ViewController.m */; };
 		8612DC37241A24EC0014DF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC35241A24EC0014DF09 /* Main.storyboard */; };
@@ -37,6 +39,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8610CF4C241DC1B9004147BF /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		8610CF4D241DC1B9004147BF /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		8610CF4F241DC638004147BF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8610CF50241DC638004147BF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8612DC29241A24EC0014DF09 /* amplifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amplifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8612DC2C241A24EC0014DF09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8612DC2D241A24EC0014DF09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +96,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8610CF4A241DC181004147BF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				8610CF4F241DC638004147BF /* BaseViewController.h */,
+				8610CF50241DC638004147BF /* BaseViewController.m */,
+				8610CF4C241DC1B9004147BF /* CameraViewController.h */,
+				8610CF4D241DC1B9004147BF /* CameraViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		8610CF4B241DC181004147BF /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		8612DC20241A24EC0014DF09 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +135,8 @@
 		8612DC2B241A24EC0014DF09 /* amplifier */ = {
 			isa = PBXGroup;
 			children = (
+				8610CF4A241DC181004147BF /* controller */,
+				8610CF4B241DC181004147BF /* view */,
 				8612DC4C241A45410014DF09 /* AipBase.framework */,
 				8612DC4D241A45410014DF09 /* AipOcrSdk.framework */,
 				8612DC2C241A24EC0014DF09 /* AppDelegate.h */,
@@ -262,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8612DC34241A24EC0014DF09 /* ViewController.m in Sources */,
+				8610CF51241DC638004147BF /* BaseViewController.m in Sources */,
+				8610CF4E241DC1B9004147BF /* CameraViewController.m in Sources */,
 				8612DC2E241A24EC0014DF09 /* AppDelegate.m in Sources */,
 				8612DC3F241A24F00014DF09 /* main.m in Sources */,
 			);
