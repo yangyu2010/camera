@@ -50,5 +50,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>aps-environment</key>
+	<string>production</string>
 </dict>
 </plist>
