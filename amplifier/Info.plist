@@ -39,5 +39,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>以便使用图片识别文字功能</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>将图片保存到本地相册中</string>
 </dict>
 </plist>

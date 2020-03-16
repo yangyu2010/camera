@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="29q-9S-4ii">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="444" translatesAutoresizingMaskIntoConstraints="NO" id="pgA-aX-MU0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2900(20200316-152657)" translatesAutoresizingMaskIntoConstraints="NO" id="pgA-aX-MU0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnZ-iH-Blp">
@@ -67,18 +67,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo8-oH-eKE">
                                         <rect key="frame" x="22" y="44" width="24" height="24"/>
                                         <state key="normal" image="btn_home_setting"/>
+                                        <connections>
+                                            <action selector="setting:" destination="X7J-cM-5w0" eventType="touchUpInside" id="0d0-FN-9jy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-ia-mdF">
                                         <rect key="frame" x="368" y="44" width="24" height="24"/>
                                         <state key="normal" image="btn_home_circle"/>
+                                        <connections>
+                                            <action selector="switch:" destination="X7J-cM-5w0" eventType="touchUpInside" id="duD-oj-4XH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-3H-7tH">
                                         <rect key="frame" x="324" y="44" width="24" height="24"/>
                                         <state key="normal" image="btn_home_flash"/>
+                                        <connections>
+                                            <action selector="flash:" destination="X7J-cM-5w0" eventType="touchUpInside" id="5HU-ox-0bK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VI6-hS-dr1">
                                         <rect key="frame" x="327" y="798" width="60" height="60"/>
                                         <state key="normal" image="btn_home_camera"/>
+                                        <connections>
+                                            <action selector="take:" destination="X7J-cM-5w0" eventType="touchUpInside" id="EbY-1Y-aBU"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOq-iT-v5H">
                                         <rect key="frame" x="22" y="806" width="283" height="44"/>
@@ -89,6 +101,9 @@
                                             </button>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-rH-gG3">
                                                 <rect key="frame" x="14" y="7" width="215" height="31"/>
+                                                <connections>
+                                                    <action selector="suofang:" destination="X7J-cM-5w0" eventType="valueChanged" id="Y6U-0g-OH4"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,6 +137,9 @@
                                         </constraints>
                                         <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="liangdu:" destination="X7J-cM-5w0" eventType="valueChanged" id="Um6-n1-scG"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -155,6 +173,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="KoH-h4-38i"/>
                     <connections>
+                        <outlet property="slider1" destination="KdX-rH-gG3" id="N9X-Lo-qHl"/>
                         <outlet property="slider2" destination="KHY-Yh-opI" id="O5j-gP-R8Q"/>
                     </connections>
                 </viewController>
@@ -182,7 +201,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="444" width="3024" height="4032"/>
+        <image name="IMG_2900(20200316-152657)" width="555" height="1200"/>
         <image name="btn_home_camera" width="60" height="60"/>
         <image name="btn_home_circle" width="24" height="24"/>
         <image name="btn_home_flash" width="24" height="24"/>
