@@ -14,7 +14,7 @@
 
 
 
-@interface CameraViewController ()
+@interface CameraViewController () <UIGestureRecognizerDelegate>
 
 
 /// liangdu
@@ -49,6 +49,16 @@
 //是否开启闪光灯
 @property (nonatomic)BOOL isflashOn;
 
+/**
+            *  记录开始的缩放比例
+            */
+@property(nonatomic,assign)CGFloat beginGestureScale;
+
+/**
+          * 最后的缩放比例
+          */
+@property(nonatomic,assign)CGFloat effectiveScale;
+
 
 @end
 
@@ -58,7 +68,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
+    self.beginGestureScale =  1.0;
+    self.effectiveScale = 1.0;
+    
     self.slider2.transform = CGAffineTransformMakeRotation(-M_PI_2);
     
     if ([self checkCameraPermission] == NO) {
@@ -163,6 +175,8 @@
        return;
    }
    
+    [videoConnection setVideoScaleAndCropFactor:self.effectiveScale];
+    
    [self.ImageOutPut captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
       
        if (imageDataSampleBuffer == nil) {
@@ -320,8 +334,57 @@
     [self.view addGestureRecognizer:tapGesture];
     
     
+    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
+    [self.view addGestureRecognizer:pinch];
+    pinch.delegate = self;
+    
     
 }
+
+//缩放手势 用于调整焦距
+- (void)handlePinchGesture:(UIPinchGestureRecognizer *)recognizer {
+
+
+    BOOL allTouchesAreOnThePreviewLayer = YES;
+    NSUInteger numTouches = [recognizer numberOfTouches], i;
+    for ( i = 0; i < numTouches; ++i ) {
+        CGPoint location = [recognizer locationOfTouch:i inView:self.view];
+        CGPoint convertedLocation = [self.previewLayer convertPoint:location fromLayer:self.previewLayer.superlayer];
+        if ( ! [self.previewLayer containsPoint:convertedLocation] ) {
+            allTouchesAreOnThePreviewLayer = NO;
+            break;
+        }
+    }
+    
+    if ( allTouchesAreOnThePreviewLayer ) {
+        self.effectiveScale = self.beginGestureScale * recognizer.scale;
+        if (self.effectiveScale < 1.0){
+            self.effectiveScale = 1.0;
+        }
+        NSLog(@"%f-------------->%f------------recognizerScale%f",self.effectiveScale,self.beginGestureScale,recognizer.scale);
+
+        CGFloat maxScaleAndCropFactor = [[self.ImageOutPut connectionWithMediaType:AVMediaTypeVideo] videoMaxScaleAndCropFactor];
+    
+        NSLog(@"%f",maxScaleAndCropFactor);
+        if (self.effectiveScale > maxScaleAndCropFactor)
+        {
+            self.effectiveScale = maxScaleAndCropFactor;
+        }
+        
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:.025];
+        [self.previewLayer setAffineTransform:CGAffineTransformMakeScale(self.effectiveScale, self.effectiveScale)];
+        [CATransaction commit];
+    }
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if ([gestureRecognizer isKindOfClass:[UIPinchGestureRecognizer class]]) {
+        self.beginGestureScale = self.effectiveScale;
+    }
+    return YES;
+}
+
 
 - (void)focusGesture:(UITapGestureRecognizer*)gesture{
     CGPoint point = [gesture locationInView:gesture.view];
