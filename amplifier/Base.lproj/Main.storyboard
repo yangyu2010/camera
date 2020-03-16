@@ -70,11 +70,11 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-ia-mdF">
                                         <rect key="frame" x="368" y="44" width="24" height="24"/>
-                                        <state key="normal" image="btn_home_setting"/>
+                                        <state key="normal" image="btn_home_circle"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-3H-7tH">
                                         <rect key="frame" x="324" y="44" width="24" height="24"/>
-                                        <state key="normal" image="btn_home_setting"/>
+                                        <state key="normal" image="btn_home_flash"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VI6-hS-dr1">
                                         <rect key="frame" x="327" y="798" width="60" height="60"/>
@@ -108,14 +108,20 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_home_phone" translatesAutoresizingMaskIntoConstraints="NO" id="eI2-Sz-bcN">
-                                        <rect key="frame" x="372" y="478" width="20" height="20"/>
+                                        <rect key="frame" x="372" y="490" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="c8B-T0-Qxg"/>
+                                            <constraint firstAttribute="width" constant="20" id="nPK-rY-3Uf"/>
+                                        </constraints>
                                     </imageView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KHY-Yh-opI">
-                                        <rect key="frame" x="282" y="348" width="204" height="31"/>
+                                        <rect key="frame" x="282" y="360" width="204" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="yxp-ie-734"/>
                                             <constraint firstAttribute="height" constant="30" id="za7-by-Xmo"/>
                                         </constraints>
+                                        <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,7 +135,6 @@
                                     <constraint firstItem="Eo8-oH-eKE" firstAttribute="leading" secondItem="EGA-6w-YjZ" secondAttribute="leading" constant="22" id="WKx-ZF-Y6B"/>
                                     <constraint firstItem="jOq-iT-v5H" firstAttribute="centerY" secondItem="VI6-hS-dr1" secondAttribute="centerY" id="avc-Hx-Qlw"/>
                                     <constraint firstItem="VI6-hS-dr1" firstAttribute="leading" secondItem="jOq-iT-v5H" secondAttribute="trailing" constant="22" id="c85-ed-Q9i"/>
-                                    <constraint firstItem="eI2-Sz-bcN" firstAttribute="centerY" secondItem="EGA-6w-YjZ" secondAttribute="centerY" constant="40" id="caH-3B-8KQ"/>
                                     <constraint firstAttribute="trailing" secondItem="FJa-ia-mdF" secondAttribute="trailing" constant="22" id="ceD-Ri-Yi3"/>
                                     <constraint firstAttribute="trailing" secondItem="KHY-Yh-opI" secondAttribute="trailing" constant="-70" id="ejS-LG-eNC"/>
                                     <constraint firstItem="FJa-ia-mdF" firstAttribute="centerY" secondItem="Eo8-oH-eKE" secondAttribute="centerY" id="iLH-eB-GNI"/>
@@ -142,6 +147,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="EGA-6w-YjZ" secondAttribute="bottom" id="7k3-Ox-UbP"/>
                             <constraint firstItem="EGA-6w-YjZ" firstAttribute="leading" secondItem="xUp-wX-FiP" secondAttribute="leading" id="X2K-jn-06q"/>
+                            <constraint firstItem="KHY-Yh-opI" firstAttribute="centerY" secondItem="xUp-wX-FiP" secondAttribute="centerY" constant="-100" id="jcv-dh-UKq"/>
                             <constraint firstItem="EGA-6w-YjZ" firstAttribute="top" secondItem="5dQ-GY-vL2" secondAttribute="top" id="ugo-XP-qEQ"/>
                             <constraint firstItem="EGA-6w-YjZ" firstAttribute="trailing" secondItem="xUp-wX-FiP" secondAttribute="trailing" id="ySY-ho-R38"/>
                         </constraints>
@@ -178,6 +184,8 @@
     <resources>
         <image name="444" width="3024" height="4032"/>
         <image name="btn_home_camera" width="60" height="60"/>
+        <image name="btn_home_circle" width="24" height="24"/>
+        <image name="btn_home_flash" width="24" height="24"/>
         <image name="btn_home_magnifier" width="24" height="24"/>
         <image name="btn_home_phone" width="20" height="20"/>
         <image name="btn_home_setting" width="24" height="24"/>

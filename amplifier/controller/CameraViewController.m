@@ -23,13 +23,14 @@
     // Do any additional setup after loading the view.
     
     
+    NSLog(@"viewDidLoad111 %f", 270.0/180*M_PI);
     
-    
-    
-    [self.slider2 removeConstraints:self.slider2.constraints];
-    [self.slider2 setTranslatesAutoresizingMaskIntoConstraints:YES];
-    self.slider2.transform = CGAffineTransformRotate(self.slider2.transform,270.0/180*M_PI);
 
+//    [self.slider2 removeConstraints:self.slider2.constraints];
+//    [self.slider2 setTranslatesAutoresizingMaskIntoConstraints:YES];
+//    self.slider2.transform = CGAffineTransformRotate(self.slider2.transform,270.0/180*M_PI);
+
+    self.slider2.transform = CGAffineTransformMakeRotation(-M_PI_2);
 }
 
 /*
