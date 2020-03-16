@@ -37,40 +37,39 @@
 }
 
 - (IBAction)action:(id)sender {
-//    NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"deviceToken"];
-//
-//    NSString *token = @"111111";
-    NSString *token = [JPUSHService registrationID];
-    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
 
-    }];
-    if (token.length == 0) {
-        [self.view makeToast:@"设备registrationID未获取到, 不能推送!"];
-        return;
-    }
+    
+//    NSString *token = [JPUSHService registrationID];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    NSDictionary *dict = @{
-        @"registrationId": token,
-    };
-    
-    [manager POST:@"http://94.191.30.13/notification/send" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-//        if ([responseObject[@"code"] integerValue] == 0) {
-//            self.arrDatas = responseObject[@"res"];
-//            [self.collectionView reloadData];
-//        } else {
-//            [self.view makeToast:responseObject[@"msg"]];
-//        }
-        [self.view makeToast:responseObject[@"enMsg"]];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        [self.view makeToast:error.localizedDescription];
+    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
 
+        if (registrationID.length == 0) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self.view makeToast:@"设备JPush registrationID未获取到, 不能推送!"];
+            return;
+        }
+        
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        
+        NSDictionary *dict = @{
+            @"registrationId": registrationID,
+        };
+        
+        [manager POST:@"http://94.191.30.13/notification/send" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self.view makeToast:responseObject[@"enMsg"]];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self.view makeToast:error.localizedDescription];
+
+        }];
     }];
+    
+    
+    
+    
 }
 
 /*
