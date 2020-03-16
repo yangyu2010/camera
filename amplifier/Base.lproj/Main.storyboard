@@ -80,10 +80,33 @@
                                         <rect key="frame" x="327" y="798" width="60" height="60"/>
                                         <state key="normal" image="btn_home_camera"/>
                                     </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-rH-gG3">
-                                        <rect key="frame" x="69" y="813" width="222" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </slider>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOq-iT-v5H">
+                                        <rect key="frame" x="22" y="806" width="283" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWD-Ko-Vyg">
+                                                <rect key="frame" x="243" y="10" width="24" height="24"/>
+                                                <state key="normal" image="btn_home_magnifier"/>
+                                            </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-rH-gG3">
+                                                <rect key="frame" x="14" y="7" width="215" height="31"/>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="IWD-Ko-Vyg" firstAttribute="leading" secondItem="KdX-rH-gG3" secondAttribute="trailing" constant="16" id="Afl-Ne-wYf"/>
+                                            <constraint firstAttribute="trailing" secondItem="IWD-Ko-Vyg" secondAttribute="trailing" constant="16" id="Chy-r6-GB5"/>
+                                            <constraint firstItem="IWD-Ko-Vyg" firstAttribute="centerY" secondItem="jOq-iT-v5H" secondAttribute="centerY" id="FpM-AX-qej"/>
+                                            <constraint firstItem="KdX-rH-gG3" firstAttribute="leading" secondItem="jOq-iT-v5H" secondAttribute="leading" constant="16" id="ZuQ-54-FOP"/>
+                                            <constraint firstAttribute="height" constant="44" id="csu-NS-bSk"/>
+                                            <constraint firstItem="KdX-rH-gG3" firstAttribute="centerY" secondItem="jOq-iT-v5H" secondAttribute="centerY" id="i2n-xu-lPK"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -93,8 +116,11 @@
                                     <constraint firstAttribute="trailing" secondItem="VI6-hS-dr1" secondAttribute="trailing" constant="27" id="Grt-lc-ltB"/>
                                     <constraint firstItem="FJa-ia-mdF" firstAttribute="leading" secondItem="Sxo-3H-7tH" secondAttribute="trailing" constant="20" id="UiY-Rk-NcW"/>
                                     <constraint firstItem="Eo8-oH-eKE" firstAttribute="leading" secondItem="EGA-6w-YjZ" secondAttribute="leading" constant="22" id="WKx-ZF-Y6B"/>
+                                    <constraint firstItem="jOq-iT-v5H" firstAttribute="centerY" secondItem="VI6-hS-dr1" secondAttribute="centerY" id="avc-Hx-Qlw"/>
+                                    <constraint firstItem="VI6-hS-dr1" firstAttribute="leading" secondItem="jOq-iT-v5H" secondAttribute="trailing" constant="22" id="c85-ed-Q9i"/>
                                     <constraint firstAttribute="trailing" secondItem="FJa-ia-mdF" secondAttribute="trailing" constant="22" id="ceD-Ri-Yi3"/>
                                     <constraint firstItem="FJa-ia-mdF" firstAttribute="centerY" secondItem="Eo8-oH-eKE" secondAttribute="centerY" id="iLH-eB-GNI"/>
+                                    <constraint firstItem="jOq-iT-v5H" firstAttribute="leading" secondItem="EGA-6w-YjZ" secondAttribute="leading" constant="22" id="nDv-jT-sg7"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -135,6 +161,7 @@
     <resources>
         <image name="444" width="3024" height="4032"/>
         <image name="btn_home_camera" width="60" height="60"/>
+        <image name="btn_home_magnifier" width="24" height="24"/>
         <image name="btn_home_setting" width="24" height="24"/>
     </resources>
 </document>
