@@ -40,29 +40,18 @@
 
 - (IBAction)blackwhite:(id)sender {
 
-
     UIImage *inputImage = self.imgView.image;
            
     // 生成GPUImagePicture
     GPUImagePicture *sourcePicture = [[GPUImagePicture alloc] initWithImage:inputImage smoothlyScaleOutput:YES];
-           
-    // 随便用一个滤镜
-    GPUImageAverageLuminanceThresholdFilter *sepiaFilter = [[GPUImageAverageLuminanceThresholdFilter alloc] init];
-    //    [(GPUImageLuminanceThresholdFilter *)_sepiaFilter setThreshold:0.44];
-    //    [(GPUImageAdaptiveThresholdFilter *)_sepiaFilter setBlurRadiusInPixels:10.0];
-    [(GPUImageAverageLuminanceThresholdFilter *)sepiaFilter setThresholdMultiplier:0.8];
-    //    [_sepiaFilter setIntensity:1.0];
-    //    [(GPUImageMonochromeFilter *)_sepiaFilter setColor:(GPUVector4){1.0f, 1.0f, 1.0f, 1.f}];
-
-    [sourcePicture addTarget:sepiaFilter];
-
+    GPUImageGrayscaleFilter *filter = [[GPUImageGrayscaleFilter alloc] init];
+    [sourcePicture addTarget:filter];
     [sourcePicture processImage];
-           
            
            
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 保存到相册
-        UIImage *keepImage = [sepiaFilter imageByFilteringImage:inputImage];
+        UIImage *keepImage = [filter imageByFilteringImage:inputImage];
         if (keepImage) {
             [self saveImage:keepImage];
             self.imgView.image = keepImage;
