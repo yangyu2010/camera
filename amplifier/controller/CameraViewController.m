@@ -10,6 +10,10 @@
 
 @interface CameraViewController ()
 
+
+@property (weak, nonatomic) IBOutlet UISlider *slider2;
+
+
 @end
 
 @implementation CameraViewController
@@ -17,6 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
+    
+    
+    [self.slider2 removeConstraints:self.slider2.constraints];
+    [self.slider2 setTranslatesAutoresizingMaskIntoConstraints:YES];
+    self.slider2.transform = CGAffineTransformRotate(self.slider2.transform,270.0/180*M_PI);
+
 }
 
 /*
