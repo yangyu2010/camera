@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="29q-9S-4ii">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -173,6 +173,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="KoH-h4-38i"/>
                     <connections>
+                        <outlet property="backView" destination="EGA-6w-YjZ" id="Vi2-sB-BeW"/>
                         <outlet property="slider1" destination="KdX-rH-gG3" id="N9X-Lo-qHl"/>
                         <outlet property="slider2" destination="KHY-Yh-opI" id="O5j-gP-R8Q"/>
                     </connections>
@@ -180,6 +181,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAn-VY-Kje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1921.7391304347827" y="78.348214285714278"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="PUr-lL-fBc">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="1UF-2B-sB9" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbF-g8-r53">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dq8-DB-m61">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNP-c7-NT0">
+                                        <rect key="frame" x="24" y="6" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="JLd-M7-e3q"/>
+                                            <constraint firstAttribute="width" constant="32" id="Vkc-Y7-JxG"/>
+                                        </constraints>
+                                        <state key="normal" title="Butto" image="icon_back"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="GNP-c7-NT0" firstAttribute="centerY" secondItem="Dq8-DB-m61" secondAttribute="centerY" id="Z5v-VI-Cym"/>
+                                    <constraint firstItem="GNP-c7-NT0" firstAttribute="leading" secondItem="Dq8-DB-m61" secondAttribute="leading" constant="24" id="dq0-iY-jG5"/>
+                                    <constraint firstAttribute="height" constant="44" id="kIK-pC-vRf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-2x-ZY6">
+                                <rect key="frame" x="336" y="51.5" width="56" height="29"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.40784313725490196" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="BaI-d0-g6o"/>
+                                    <constraint firstAttribute="height" constant="29" id="HJZ-Wc-Yg3"/>
+                                </constraints>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dq8-DB-m61" firstAttribute="leading" secondItem="V47-lF-mL3" secondAttribute="leading" id="7ur-pY-GC6"/>
+                            <constraint firstItem="Dq8-DB-m61" firstAttribute="trailing" secondItem="V47-lF-mL3" secondAttribute="trailing" id="DTQ-Kg-w4R"/>
+                            <constraint firstItem="V47-lF-mL3" firstAttribute="trailing" secondItem="3Dh-2x-ZY6" secondAttribute="trailing" constant="22" id="SZc-KI-pcA"/>
+                            <constraint firstItem="3Dh-2x-ZY6" firstAttribute="centerY" secondItem="Dq8-DB-m61" secondAttribute="centerY" id="WLb-Cc-GC2"/>
+                            <constraint firstItem="Dq8-DB-m61" firstAttribute="top" secondItem="V47-lF-mL3" secondAttribute="top" id="WzG-WM-hbZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V47-lF-mL3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSn-zp-sSb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889.8550724637682" y="922.76785714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6cZ-cJ-4ov">
@@ -197,7 +258,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJP-Tb-Jvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011.5942028985507" y="78.348214285714278"/>
+            <point key="canvasLocation" x="1172" y="78"/>
         </scene>
     </scenes>
     <resources>
@@ -208,5 +269,6 @@
         <image name="btn_home_magnifier" width="24" height="24"/>
         <image name="btn_home_phone" width="20" height="20"/>
         <image name="btn_home_setting" width="24" height="24"/>
+        <image name="icon_back" width="24" height="24"/>
     </resources>
 </document>

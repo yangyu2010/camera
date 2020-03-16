@@ -8,6 +8,9 @@
 
 #import "CameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "PhotoViewController.h"
+
+
 
 #define KScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight  [UIScreen mainScreen].bounds.size.height
@@ -23,6 +26,7 @@
 /// suofang
 @property (weak, nonatomic) IBOutlet UISlider *slider1;
 
+@property (weak, nonatomic) IBOutlet UIView *backView;
 
 
 //捕获设备，通常是前置摄像头，后置摄像头，麦克风（音频输入）
@@ -73,19 +77,24 @@
     
     self.slider2.transform = CGAffineTransformMakeRotation(-M_PI_2);
     
-    if ([self checkCameraPermission] == NO) {
-        [self asyncPushAuthAlert:@"相机"];
-    } else {
-        [self customCamera];
-        [self initSubViews];
-        
-        [self focusAtPoint:CGPointMake(0.5, 0.5)];
-        
-        AVCaptureConnection *videoConnection = [self.ImageOutPut connectionWithMediaType:AVMediaTypeVideo];
-        self.slider1.maximumValue = videoConnection.videoMaxScaleAndCropFactor;
-        self.slider1.minimumValue = 1;
-    }
-    
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+        //分线程
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (granted) {
+                [self customCamera];
+                [self initSubViews];
+                
+                [self focusAtPoint:CGPointMake(0.5, 0.5)];
+                
+                AVCaptureConnection *videoConnection = [self.ImageOutPut connectionWithMediaType:AVMediaTypeVideo];
+                self.slider1.maximumValue = videoConnection.videoMaxScaleAndCropFactor;
+                self.slider1.minimumValue = 1;
+            } else {
+                [self asyncPushAuthAlert:@"相机"];
+            }
+        });
+    }];
+
 }
 
 
@@ -170,25 +179,34 @@
 
 - (IBAction)take:(id)sender {
     
-   AVCaptureConnection * videoConnection = [self.ImageOutPut connectionWithMediaType:AVMediaTypeVideo];
-   if (videoConnection ==  nil) {
-       return;
-   }
-   
-    [videoConnection setVideoScaleAndCropFactor:self.effectiveScale];
+    PhotoViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PhotoViewController"];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+
+    [self presentViewController:nav animated:YES completion:nil];
+//    [self.navigationController pushViewController:vc animated:YES];
     
-   [self.ImageOutPut captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-      
-       if (imageDataSampleBuffer == nil) {
-           return;
-       }
-       
-       NSData *imageData =  [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-//       [self saveImageWithImage:];
-       UIImage *image = [UIImage imageWithData:imageData];
-       [self saveImage:image];
-       
-   }];
+//   AVCaptureConnection * videoConnection = [self.ImageOutPut connectionWithMediaType:AVMediaTypeVideo];
+//   if (videoConnection ==  nil) {
+//       return;
+//   }
+//
+//    [videoConnection setVideoScaleAndCropFactor:self.effectiveScale];
+//
+//   [self.ImageOutPut captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+//
+//       if (imageDataSampleBuffer == nil) {
+//           return;
+//       }
+//
+//       NSData *imageData =  [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+////       [self saveImageWithImage:];
+//       UIImage *image = [UIImage imageWithData:imageData];
+//       [self saveImage:image];
+//
+//
+//
+//   }];
 }
 
 - (void)saveImage:(UIImage *)image {
@@ -239,7 +257,7 @@
 #pragma mark- 检测相机权限
 - (BOOL)checkCameraPermission {
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    if (authStatus == AVAuthorizationStatusDenied) {
+    if (authStatus == AVAuthorizationStatusAuthorized) {
         return YES;
     }
    
@@ -295,7 +313,8 @@
     self.previewLayer.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight);
     self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
 //    [self.view.layer addSublayer:self.previewLayer];
-    [self.view.layer insertSublayer:self.previewLayer atIndex:0];
+//    [self.view.layer insertSublayer:self.previewLayer atIndex:0];
+    [self.backView.layer insertSublayer:self.previewLayer atIndex:0];
     
     //开始启动
     [self.session startRunning];
@@ -327,15 +346,15 @@
     self.focusView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
     self.focusView.layer.borderWidth = 1.0;
     self.focusView.layer.borderColor = [UIColor greenColor].CGColor;
-    [self.view addSubview:self.focusView];
+    [self.backView addSubview:self.focusView];
     self.focusView.hidden = YES;
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(focusGesture:)];
-    [self.view addGestureRecognizer:tapGesture];
+    [self.backView addGestureRecognizer:tapGesture];
     
     
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
-    [self.view addGestureRecognizer:pinch];
+    [self.backView addGestureRecognizer:pinch];
     pinch.delegate = self;
     
     
@@ -348,7 +367,7 @@
     BOOL allTouchesAreOnThePreviewLayer = YES;
     NSUInteger numTouches = [recognizer numberOfTouches], i;
     for ( i = 0; i < numTouches; ++i ) {
-        CGPoint location = [recognizer locationOfTouch:i inView:self.view];
+        CGPoint location = [recognizer locationOfTouch:i inView:self.backView];
         CGPoint convertedLocation = [self.previewLayer convertPoint:location fromLayer:self.previewLayer.superlayer];
         if ( ! [self.previewLayer containsPoint:convertedLocation] ) {
             allTouchesAreOnThePreviewLayer = NO;
@@ -392,7 +411,7 @@
 }
 
 - (void)focusAtPoint:(CGPoint)point{
-    CGSize size = self.view.bounds.size;
+    CGSize size = self.backView.bounds.size;
     // focusPoint 函数后面Point取值范围是取景框左上角（0，0）到取景框右下角（1，1）之间,按这个来但位置就是不对，只能按上面的写法才可以。前面是点击位置的y/PreviewLayer的高度，后面是1-点击位置的x/PreviewLayer的宽度
     CGPoint focusPoint = CGPointMake( point.y /size.height ,1 - point.x/size.width );
     

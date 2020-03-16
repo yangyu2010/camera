@@ -21,6 +21,7 @@
 		8612DC55241A48470014DF09 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4C241A45410014DF09 /* AipBase.framework */; };
 		8612DC56241A48470014DF09 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4C241A45410014DF09 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8612DC5A241A4A030014DF09 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC59241A4A030014DF09 /* 1.png */; };
+		8693B31A241F7329008028C0 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8693B319241F7329008028C0 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,8 @@
 		8612DC4C241A45410014DF09 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
 		8612DC4D241A45410014DF09 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		8612DC59241A4A030014DF09 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		8693B318241F7329008028C0 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		8693B319241F7329008028C0 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		8F3813847205C76071C4A2BD /* Pods_amplifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amplifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8A33D2917FF96DDF6F3C39 /* Pods-amplifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplifier.release.xcconfig"; path = "Target Support Files/Pods-amplifier/Pods-amplifier.release.xcconfig"; sourceTree = "<group>"; };
 		B9CC970CBDE5DC5FC07D21C7 /* Pods-amplifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplifier.debug.xcconfig"; path = "Target Support Files/Pods-amplifier/Pods-amplifier.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				8610CF50241DC638004147BF /* BaseViewController.m */,
 				8610CF4C241DC1B9004147BF /* CameraViewController.h */,
 				8610CF4D241DC1B9004147BF /* CameraViewController.m */,
+				8693B318241F7329008028C0 /* PhotoViewController.h */,
+				8693B319241F7329008028C0 /* PhotoViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				8612DC34241A24EC0014DF09 /* ViewController.m in Sources */,
 				8610CF51241DC638004147BF /* BaseViewController.m in Sources */,
 				8610CF4E241DC1B9004147BF /* CameraViewController.m in Sources */,
+				8693B31A241F7329008028C0 /* PhotoViewController.m in Sources */,
 				8612DC2E241A24EC0014DF09 /* AppDelegate.m in Sources */,
 				8612DC3F241A24F00014DF09 /* main.m in Sources */,
 			);
