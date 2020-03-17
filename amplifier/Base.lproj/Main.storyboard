@@ -75,21 +75,21 @@
                                         <rect key="frame" x="368" y="44" width="24" height="24"/>
                                         <state key="normal" image="btn_home_circle"/>
                                         <connections>
-                                            <action selector="switch:" destination="X7J-cM-5w0" eventType="touchUpInside" id="duD-oj-4XH"/>
+                                            <action selector="change:" destination="X7J-cM-5w0" eventType="touchUpInside" id="jE1-k2-bTy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-3H-7tH">
                                         <rect key="frame" x="324" y="44" width="24" height="24"/>
                                         <state key="normal" image="btn_home_flash"/>
                                         <connections>
-                                            <action selector="flash:" destination="X7J-cM-5w0" eventType="touchUpInside" id="5HU-ox-0bK"/>
+                                            <action selector="flash:" destination="X7J-cM-5w0" eventType="touchUpInside" id="1wf-cU-Wj6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VI6-hS-dr1">
                                         <rect key="frame" x="327" y="798" width="60" height="60"/>
                                         <state key="normal" image="btn_home_camera"/>
                                         <connections>
-                                            <action selector="take:" destination="X7J-cM-5w0" eventType="touchUpInside" id="EbY-1Y-aBU"/>
+                                            <action selector="take:" destination="X7J-cM-5w0" eventType="touchUpInside" id="9dK-GQ-nuo"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOq-iT-v5H">
@@ -99,7 +99,7 @@
                                                 <rect key="frame" x="243" y="10" width="24" height="24"/>
                                                 <state key="normal" image="btn_home_magnifier"/>
                                             </button>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-rH-gG3">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-rH-gG3">
                                                 <rect key="frame" x="14" y="7" width="215" height="31"/>
                                                 <connections>
                                                     <action selector="suofang:" destination="X7J-cM-5w0" eventType="valueChanged" id="Y6U-0g-OH4"/>

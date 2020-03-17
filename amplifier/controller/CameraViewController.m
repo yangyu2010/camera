@@ -86,9 +86,9 @@
                 
                 [self focusAtPoint:CGPointMake(0.5, 0.5)];
                 
-                AVCaptureConnection *videoConnection = [self.ImageOutPut connectionWithMediaType:AVMediaTypeVideo];
-                self.slider1.maximumValue = videoConnection.videoMaxScaleAndCropFactor;
-                self.slider1.minimumValue = 1;
+//                AVCaptureConnection *videoConnection = [self.ImageOutPut connectionWithMediaType:AVMediaTypeVideo];
+//                self.slider1.maximumValue = 10;
+//                self.slider1.minimumValue = 1;
             } else {
                 [self asyncPushAuthAlert:@"相机"];
             }
@@ -123,7 +123,7 @@
     }
 }
 
-- (IBAction)switch:(id)sender {
+- (IBAction)change:(id)sender {
     
     //获取摄像头的数量
       NSUInteger cameraCount = [[AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo] count];
@@ -174,8 +174,9 @@
           [self.session commitConfiguration];
           
       }
-      
 }
+
+
 
 - (IBAction)take:(id)sender {
     
