@@ -8,7 +8,10 @@
 
 #import "PhotoViewController.h"
 
+
 @interface PhotoViewController ()
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *consNavViewTop;
 
 @end
 
@@ -17,6 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    self.consNavViewTop.constant = self;
+}
+
+
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.consNavViewTop.constant = self.view.safeAreaInsets.top;
 }
 
 /*
