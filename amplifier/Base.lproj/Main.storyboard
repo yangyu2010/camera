@@ -72,14 +72,22 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-ia-mdF">
-                                        <rect key="frame" x="368" y="44" width="24" height="24"/>
+                                        <rect key="frame" x="360" y="40" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="6pf-WP-7z9"/>
+                                            <constraint firstAttribute="height" constant="32" id="wHL-7v-AIx"/>
+                                        </constraints>
                                         <state key="normal" image="btn_home_circle"/>
                                         <connections>
                                             <action selector="change:" destination="X7J-cM-5w0" eventType="touchUpInside" id="jE1-k2-bTy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-3H-7tH">
-                                        <rect key="frame" x="324" y="44" width="24" height="24"/>
+                                        <rect key="frame" x="308" y="40" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="saQ-xA-qzw"/>
+                                            <constraint firstAttribute="height" constant="32" id="xoC-Z7-KS0"/>
+                                        </constraints>
                                         <state key="normal" image="btn_home_flash"/>
                                         <connections>
                                             <action selector="flash:" destination="X7J-cM-5w0" eventType="touchUpInside" id="1wf-cU-Wj6"/>
@@ -99,7 +107,7 @@
                                                 <rect key="frame" x="243" y="10" width="24" height="24"/>
                                                 <state key="normal" image="btn_home_magnifier"/>
                                             </button>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-rH-gG3">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-rH-gG3">
                                                 <rect key="frame" x="14" y="7" width="215" height="31"/>
                                                 <connections>
                                                     <action selector="suofang:" destination="X7J-cM-5w0" eventType="valueChanged" id="Y6U-0g-OH4"/>
@@ -294,14 +302,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ge2-1I-QNC">
                                                 <rect key="frame" x="249.5" y="10" width="124.5" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-nK-4ih">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-nK-4ih">
                                                         <rect key="frame" x="0.0" y="0.0" width="124.5" height="24"/>
-                                                        <state key="normal" image="btn_edit_left"/>
+                                                        <state key="normal" image="btn_edit_right"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGF-cg-CEF">
                                                         <rect key="frame" x="0.0" y="24" width="124.5" height="26"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                        <state key="normal" title="左转">
+                                                        <state key="normal" title="右转">
                                                             <color key="titleColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                     </button>
@@ -362,6 +370,7 @@
         <image name="IMG_2900(20200316-152657)" width="555" height="1200"/>
         <image name="btn_edit_black&amp;white" width="24" height="24"/>
         <image name="btn_edit_left" width="24" height="24"/>
+        <image name="btn_edit_right" width="24" height="24"/>
         <image name="btn_home_camera" width="60" height="60"/>
         <image name="btn_home_circle" width="24" height="24"/>
         <image name="btn_home_flash" width="24" height="24"/>

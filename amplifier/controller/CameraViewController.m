@@ -105,20 +105,15 @@
 }
 
 - (IBAction)flash:(id)sender {
-    
     if ([_device lockForConfiguration:nil]) {
         if (_isflashOn) {
-            if ([_device isFlashModeSupported:AVCaptureFlashModeOff]) {
-                [_device setFlashMode:AVCaptureFlashModeOff];
-                _isflashOn = NO;
-            }
+            _device.torchMode = AVCaptureTorchModeOff;
+            _isflashOn = NO;
         }else{
-            if ([_device isFlashModeSupported:AVCaptureFlashModeOn]) {
-                [_device setFlashMode:AVCaptureFlashModeOn];
-                _isflashOn = YES;
-            }
+            _device.torchMode = AVCaptureTorchModeOn;
+            _isflashOn = YES;
         }
-        
+
         [_device unlockForConfiguration];
     }
 }
@@ -383,7 +378,7 @@
         }
         NSLog(@"%f-------------->%f------------recognizerScale%f",self.effectiveScale,self.beginGestureScale,recognizer.scale);
 
-        CGFloat maxScaleAndCropFactor = [[self.ImageOutPut connectionWithMediaType:AVMediaTypeVideo] videoMaxScaleAndCropFactor];
+        CGFloat maxScaleAndCropFactor =  15;
     
         NSLog(@"%f",maxScaleAndCropFactor);
         if (self.effectiveScale > maxScaleAndCropFactor)
@@ -395,6 +390,9 @@
         [CATransaction setAnimationDuration:.025];
         [self.previewLayer setAffineTransform:CGAffineTransformMakeScale(self.effectiveScale, self.effectiveScale)];
         [CATransaction commit];
+        
+        
+        self.slider1.value = self.effectiveScale;
     }
 }
 
