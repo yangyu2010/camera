@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <AipOcrSdk/AipOcrSdk.h>
+//#import <AipOcrSdk/AipOcrSdk.h>
 #import <GPUImage/GPUImage.h>
 
 @interface ViewController ()
@@ -86,7 +86,7 @@
     
 }
 
-
+/*
 - (IBAction)ocr:(id)sender {
     
      [[AipOcrService shardService] authWithAK:@"cersK9LgZssgvfAncLMS5X4Y" andSK:@"7XoDo3MGkabHTrBfUmECmHo6l5MrOKZv"];
@@ -142,6 +142,7 @@
          NSLog(@"%@", err.localizedDescription);
      }];
 }
+*/
 
 
 - (void)baiduocr {

@@ -16,10 +16,6 @@
 		8612DC39241A24F00014DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC38241A24F00014DF09 /* Assets.xcassets */; };
 		8612DC3C241A24F00014DF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC3A241A24F00014DF09 /* LaunchScreen.storyboard */; };
 		8612DC3F241A24F00014DF09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8612DC3E241A24F00014DF09 /* main.m */; };
-		8612DC52241A48430014DF09 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4D241A45410014DF09 /* AipOcrSdk.framework */; };
-		8612DC53241A48430014DF09 /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4D241A45410014DF09 /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8612DC55241A48470014DF09 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4C241A45410014DF09 /* AipBase.framework */; };
-		8612DC56241A48470014DF09 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8612DC4C241A45410014DF09 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8612DC5A241A4A030014DF09 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC59241A4A030014DF09 /* 1.png */; };
 		8693B31A241F7329008028C0 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8693B319241F7329008028C0 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
@@ -31,8 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8612DC56241A48470014DF09 /* AipBase.framework in Embed Frameworks */,
-				8612DC53241A48430014DF09 /* AipOcrSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,8 +50,6 @@
 		8612DC3E241A24F00014DF09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8612DC45241A44880014DF09 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AipBase.framework; path = ../../Downloads/AipBase.framework; sourceTree = "<group>"; };
 		8612DC49241A44A10014DF09 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AipOcrSdk.framework; path = ../../Downloads/AipOcrSdk.framework; sourceTree = "<group>"; };
-		8612DC4C241A45410014DF09 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
-		8612DC4D241A45410014DF09 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		8612DC59241A4A030014DF09 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		8693B318241F7329008028C0 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		8693B319241F7329008028C0 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
@@ -71,9 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8612DC55241A48470014DF09 /* AipBase.framework in Frameworks */,
 				4256CEE228E56A249C71BFFD /* Pods_amplifier.framework in Frameworks */,
-				8612DC52241A48430014DF09 /* AipOcrSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +132,6 @@
 			children = (
 				8610CF4A241DC181004147BF /* controller */,
 				8610CF4B241DC181004147BF /* view */,
-				8612DC4C241A45410014DF09 /* AipBase.framework */,
-				8612DC4D241A45410014DF09 /* AipOcrSdk.framework */,
 				8612DC2C241A24EC0014DF09 /* AppDelegate.h */,
 				8612DC2D241A24EC0014DF09 /* AppDelegate.m */,
 				8612DC32241A24EC0014DF09 /* ViewController.h */,

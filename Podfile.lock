@@ -14,42 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Bytedance-UnionAD (2.8.0.1)
-  - GDTMobSDK (4.11.5):
-    - GDTMobSDK/GDTMobSDK (= 4.11.5)
-  - GDTMobSDK/GDTMobSDK (4.11.5)
   - GPUImage (0.1.7)
   - MBProgressHUD (1.2.0)
   - MJUtils (0.1.1):
     - ModuleCapability (~> 0.1.2)
   - ModuleCapability (0.1.7)
-  - NOVAdKit/ByteDance (2.0.4):
-    - Bytedance-UnionAD
-    - NOVAdKit/Core
-    - NOVUtilities
-  - NOVAdKit/Core (2.0.4):
-    - NOVRemoteConfig
-    - NOVUtilities
-  - NOVAdKit/GDT (2.0.4):
-    - GDTMobSDK
-    - NOVAdKit/Core
-    - NOVUtilities
-  - NOVAppReview (0.1.2):
-    - NOVRemoteConfig
-  - NOVRemoteConfig (2.1.1):
-    - AFNetworking
-    - NOVUtilities
-  - NOVUtilities (3.1):
-    - NOVUtilities/Defines (= 3.1)
-    - NOVUtilities/Foundation-Categories (= 3.1)
-    - NOVUtilities/Objc-Utilities (= 3.1)
-    - NOVUtilities/YYUtilities (= 3.1)
-  - NOVUtilities/Defines (3.1):
-    - NOVUtilities/Foundation-Categories
-  - NOVUtilities/Foundation-Categories (3.1)
-  - NOVUtilities/Objc-Utilities (3.1)
-  - NOVUtilities/YYUtilities (3.1):
-    - NOVUtilities/Defines
   - SDWebImage (5.6.0):
     - SDWebImage/Core (= 5.6.0)
   - SDWebImage/Core (5.6.0)
@@ -64,10 +33,6 @@ DEPENDENCIES:
   - GPUImage
   - MBProgressHUD
   - MJUtils
-  - NOVAdKit/ByteDance
-  - NOVAdKit/Core
-  - NOVAdKit/GDT
-  - NOVAppReview
   - SDWebImage
   - Toast
   - UMCAnalytics
@@ -76,8 +41,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - Bytedance-UnionAD
-    - GDTMobSDK
     - GPUImage
     - MBProgressHUD
     - MJUtils
@@ -87,30 +50,19 @@ SPEC REPOS:
     - UMCAnalytics
     - UMCCommon
     - UMCCommonLog
-  https://gitlab.com/novapps/ios-app/framework/private-cocoapods-spec-repo.git:
-    - NOVAdKit
-    - NOVAppReview
-    - NOVRemoteConfig
-    - NOVUtilities
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Bytedance-UnionAD: 289dd37fe5378e49143a5918e2ef464e102a7243
-  GDTMobSDK: da0cfe597627720b69889314091964ca2f3ae1e5
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJUtils: 0e1d68b753e897b89e4b3f2b1ef28b5993216fee
   ModuleCapability: c9d20a2f6070d9315531a94d51b1551a070662b6
-  NOVAdKit: 61fe9437f6bfbce407d559188d55f6680244b53c
-  NOVAppReview: dad885c09386b50528af5bc06d180fccad690f66
-  NOVRemoteConfig: 25cbaadc4b84c5b1893ec7fdf1aab191da1612da
-  NOVUtilities: 12b191f8332df17ac77a56a9788cb8258a3a33fc
   SDWebImage: 21b19f56b4226cdfe3aefe4e6848dc43ed129a86
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
   UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
   UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
 
-PODFILE CHECKSUM: 629cdcc82484a0c93ed8a9b9b636284227301161
+PODFILE CHECKSUM: 4ad87d4b3f74ecc4fc29cd3c1550811ab583fd73
 
 COCOAPODS: 1.8.4
