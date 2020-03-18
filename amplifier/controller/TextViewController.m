@@ -36,6 +36,7 @@
 }
 
 - (IBAction)font:(UISlider *)sender {
+    self.textView.font = [UIFont systemFontOfSize:sender.value];
 }
 
 @end
