@@ -17,6 +17,13 @@
 		8612DC3C241A24F00014DF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC3A241A24F00014DF09 /* LaunchScreen.storyboard */; };
 		8612DC3F241A24F00014DF09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8612DC3E241A24F00014DF09 /* main.m */; };
 		8612DC5A241A4A030014DF09 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8612DC59241A4A030014DF09 /* 1.png */; };
+		86581B5F2421B38E00B050D6 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86581B5B2421B2C600B050D6 /* AipBase.framework */; };
+		86581B602421B38E00B050D6 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86581B5B2421B2C600B050D6 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86581B612421B39200B050D6 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86581B5C2421B2C600B050D6 /* AipOcrSdk.framework */; };
+		86581B622421B39200B050D6 /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86581B5C2421B2C600B050D6 /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86581B652421B5E900B050D6 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B642421B5E900B050D6 /* TextViewController.m */; };
+		86581B6B2421B81200B050D6 /* UITextView+STAutoHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B682421B81200B050D6 /* UITextView+STAutoHeight.m */; };
+		86581B6C2421B81200B050D6 /* UIScrollView+STAutoHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B692421B81200B050D6 /* UIScrollView+STAutoHeight.m */; };
 		8693B31A241F7329008028C0 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8693B319241F7329008028C0 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +34,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				86581B602421B38E00B050D6 /* AipBase.framework in Embed Frameworks */,
+				86581B622421B39200B050D6 /* AipOcrSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +60,14 @@
 		8612DC45241A44880014DF09 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AipBase.framework; path = ../../Downloads/AipBase.framework; sourceTree = "<group>"; };
 		8612DC49241A44A10014DF09 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AipOcrSdk.framework; path = ../../Downloads/AipOcrSdk.framework; sourceTree = "<group>"; };
 		8612DC59241A4A030014DF09 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		86581B5B2421B2C600B050D6 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
+		86581B5C2421B2C600B050D6 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
+		86581B632421B5E900B050D6 /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		86581B642421B5E900B050D6 /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
+		86581B672421B81200B050D6 /* UIScrollView+STAutoHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+STAutoHeight.h"; sourceTree = "<group>"; };
+		86581B682421B81200B050D6 /* UITextView+STAutoHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+STAutoHeight.m"; sourceTree = "<group>"; };
+		86581B692421B81200B050D6 /* UIScrollView+STAutoHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+STAutoHeight.m"; sourceTree = "<group>"; };
+		86581B6A2421B81200B050D6 /* UITextView+STAutoHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+STAutoHeight.h"; sourceTree = "<group>"; };
 		8693B318241F7329008028C0 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		8693B319241F7329008028C0 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		8F3813847205C76071C4A2BD /* Pods_amplifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amplifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86581B5F2421B38E00B050D6 /* AipBase.framework in Frameworks */,
 				4256CEE228E56A249C71BFFD /* Pods_amplifier.framework in Frameworks */,
+				86581B612421B39200B050D6 /* AipOcrSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +117,8 @@
 				8610CF4D241DC1B9004147BF /* CameraViewController.m */,
 				8693B318241F7329008028C0 /* PhotoViewController.h */,
 				8693B319241F7329008028C0 /* PhotoViewController.m */,
+				86581B632421B5E900B050D6 /* TextViewController.h */,
+				86581B642421B5E900B050D6 /* TextViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -130,6 +151,9 @@
 		8612DC2B241A24EC0014DF09 /* amplifier */ = {
 			isa = PBXGroup;
 			children = (
+				86581B662421B81200B050D6 /* STAutoHeightTextView */,
+				86581B5B2421B2C600B050D6 /* AipBase.framework */,
+				86581B5C2421B2C600B050D6 /* AipOcrSdk.framework */,
 				8610CF4A241DC181004147BF /* controller */,
 				8610CF4B241DC181004147BF /* view */,
 				8612DC2C241A24EC0014DF09 /* AppDelegate.h */,
@@ -144,6 +168,17 @@
 				8612DC3E241A24F00014DF09 /* main.m */,
 			);
 			path = amplifier;
+			sourceTree = "<group>";
+		};
+		86581B662421B81200B050D6 /* STAutoHeightTextView */ = {
+			isa = PBXGroup;
+			children = (
+				86581B672421B81200B050D6 /* UIScrollView+STAutoHeight.h */,
+				86581B692421B81200B050D6 /* UIScrollView+STAutoHeight.m */,
+				86581B6A2421B81200B050D6 /* UITextView+STAutoHeight.h */,
+				86581B682421B81200B050D6 /* UITextView+STAutoHeight.m */,
+			);
+			path = STAutoHeightTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +317,12 @@
 			files = (
 				8612DC34241A24EC0014DF09 /* ViewController.m in Sources */,
 				8610CF51241DC638004147BF /* BaseViewController.m in Sources */,
+				86581B652421B5E900B050D6 /* TextViewController.m in Sources */,
 				8610CF4E241DC1B9004147BF /* CameraViewController.m in Sources */,
 				8693B31A241F7329008028C0 /* PhotoViewController.m in Sources */,
 				8612DC2E241A24EC0014DF09 /* AppDelegate.m in Sources */,
+				86581B6B2421B81200B050D6 /* UITextView+STAutoHeight.m in Sources */,
+				86581B6C2421B81200B050D6 /* UIScrollView+STAutoHeight.m in Sources */,
 				8612DC3F241A24F00014DF09 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

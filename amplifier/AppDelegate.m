@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AipOcrSdk/AipOcrSdk.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[AipOcrService shardService] authWithAK:@"cersK9LgZssgvfAncLMS5X4Y" andSK:@"7XoDo3MGkabHTrBfUmECmHo6l5MrOKZv"];
+
+    
     return YES;
 }
 
