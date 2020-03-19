@@ -13,7 +13,7 @@
 #import <Toast/Toast.h>
 #import <AipOcrSdk/AipOcrSdk.h>
 #import "TextViewController.h"
-
+#import "VipViewController.h"
 
 
 @interface PhotoViewController () <UIScrollViewDelegate>
@@ -131,6 +131,18 @@ static inline CGFloat GetViewHeight(UIView *view) {
 }
 - (IBAction)text:(id)sender {
 
+    
+    
+    
+    
+    BOOL isBuy = [VipViewController isBuy];
+    if (isBuy == NO) {
+        VipViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"VipViewController"];
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:vc animated:YES completion:nil];
+        
+        return;
+    }
          
          NSDictionary *options = @{
              @"language_type": @"CHN_ENG",

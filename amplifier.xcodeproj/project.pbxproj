@@ -24,6 +24,12 @@
 		86581B652421B5E900B050D6 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B642421B5E900B050D6 /* TextViewController.m */; };
 		86581B6B2421B81200B050D6 /* UITextView+STAutoHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B682421B81200B050D6 /* UITextView+STAutoHeight.m */; };
 		86581B6C2421B81200B050D6 /* UIScrollView+STAutoHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B692421B81200B050D6 /* UIScrollView+STAutoHeight.m */; };
+		86581B6F24230F5E00B050D6 /* VipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B6E24230F5E00B050D6 /* VipViewController.m */; };
+		86581B732423254800B050D6 /* VipCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B712423254800B050D6 /* VipCollectionViewCell.m */; };
+		86581B742423254800B050D6 /* VipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86581B722423254800B050D6 /* VipCollectionViewCell.xib */; };
+		86581B7B242330DC00B050D6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B77242330DC00B050D6 /* WebViewController.m */; };
+		86581B7C242330DC00B050D6 /* PrivacyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86581B78242330DC00B050D6 /* PrivacyViewController.xib */; };
+		86581B7D242330DC00B050D6 /* PrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86581B79242330DC00B050D6 /* PrivacyViewController.m */; };
 		8693B31A241F7329008028C0 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8693B319241F7329008028C0 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +74,16 @@
 		86581B682421B81200B050D6 /* UITextView+STAutoHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+STAutoHeight.m"; sourceTree = "<group>"; };
 		86581B692421B81200B050D6 /* UIScrollView+STAutoHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+STAutoHeight.m"; sourceTree = "<group>"; };
 		86581B6A2421B81200B050D6 /* UITextView+STAutoHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+STAutoHeight.h"; sourceTree = "<group>"; };
+		86581B6D24230F5E00B050D6 /* VipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VipViewController.h; sourceTree = "<group>"; };
+		86581B6E24230F5E00B050D6 /* VipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VipViewController.m; sourceTree = "<group>"; };
+		86581B702423254800B050D6 /* VipCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VipCollectionViewCell.h; sourceTree = "<group>"; };
+		86581B712423254800B050D6 /* VipCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VipCollectionViewCell.m; sourceTree = "<group>"; };
+		86581B722423254800B050D6 /* VipCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VipCollectionViewCell.xib; sourceTree = "<group>"; };
+		86581B76242330DC00B050D6 /* PrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyViewController.h; sourceTree = "<group>"; };
+		86581B77242330DC00B050D6 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		86581B78242330DC00B050D6 /* PrivacyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivacyViewController.xib; sourceTree = "<group>"; };
+		86581B79242330DC00B050D6 /* PrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyViewController.m; sourceTree = "<group>"; };
+		86581B7A242330DC00B050D6 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		8693B318241F7329008028C0 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		8693B319241F7329008028C0 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		8F3813847205C76071C4A2BD /* Pods_amplifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amplifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +135,8 @@
 				8693B319241F7329008028C0 /* PhotoViewController.m */,
 				86581B632421B5E900B050D6 /* TextViewController.h */,
 				86581B642421B5E900B050D6 /* TextViewController.m */,
+				86581B6D24230F5E00B050D6 /* VipViewController.h */,
+				86581B6E24230F5E00B050D6 /* VipViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -126,6 +144,9 @@
 		8610CF4B241DC181004147BF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				86581B702423254800B050D6 /* VipCollectionViewCell.h */,
+				86581B712423254800B050D6 /* VipCollectionViewCell.m */,
+				86581B722423254800B050D6 /* VipCollectionViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -151,6 +172,7 @@
 		8612DC2B241A24EC0014DF09 /* amplifier */ = {
 			isa = PBXGroup;
 			children = (
+				86581B75242330DC00B050D6 /* privacy */,
 				86581B662421B81200B050D6 /* STAutoHeightTextView */,
 				86581B5B2421B2C600B050D6 /* AipBase.framework */,
 				86581B5C2421B2C600B050D6 /* AipOcrSdk.framework */,
@@ -179,6 +201,18 @@
 				86581B682421B81200B050D6 /* UITextView+STAutoHeight.m */,
 			);
 			path = STAutoHeightTextView;
+			sourceTree = "<group>";
+		};
+		86581B75242330DC00B050D6 /* privacy */ = {
+			isa = PBXGroup;
+			children = (
+				86581B76242330DC00B050D6 /* PrivacyViewController.h */,
+				86581B77242330DC00B050D6 /* WebViewController.m */,
+				86581B78242330DC00B050D6 /* PrivacyViewController.xib */,
+				86581B79242330DC00B050D6 /* PrivacyViewController.m */,
+				86581B7A242330DC00B050D6 /* WebViewController.h */,
+			);
+			path = privacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8612DC5A241A4A030014DF09 /* 1.png in Resources */,
+				86581B7C242330DC00B050D6 /* PrivacyViewController.xib in Resources */,
 				8612DC3C241A24F00014DF09 /* LaunchScreen.storyboard in Resources */,
+				86581B742423254800B050D6 /* VipCollectionViewCell.xib in Resources */,
 				8612DC39241A24F00014DF09 /* Assets.xcassets in Resources */,
 				8612DC37241A24EC0014DF09 /* Main.storyboard in Resources */,
 			);
@@ -315,14 +351,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86581B6F24230F5E00B050D6 /* VipViewController.m in Sources */,
 				8612DC34241A24EC0014DF09 /* ViewController.m in Sources */,
 				8610CF51241DC638004147BF /* BaseViewController.m in Sources */,
 				86581B652421B5E900B050D6 /* TextViewController.m in Sources */,
 				8610CF4E241DC1B9004147BF /* CameraViewController.m in Sources */,
+				86581B732423254800B050D6 /* VipCollectionViewCell.m in Sources */,
 				8693B31A241F7329008028C0 /* PhotoViewController.m in Sources */,
+				86581B7B242330DC00B050D6 /* WebViewController.m in Sources */,
 				8612DC2E241A24EC0014DF09 /* AppDelegate.m in Sources */,
 				86581B6B2421B81200B050D6 /* UITextView+STAutoHeight.m in Sources */,
 				86581B6C2421B81200B050D6 /* UIScrollView+STAutoHeight.m in Sources */,
+				86581B7D242330DC00B050D6 /* PrivacyViewController.m in Sources */,
 				8612DC3F241A24F00014DF09 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,10 +41,11 @@ target 'amplifier' do
     pod 'Toast'
     
     
-#    pod 'NOVAdKit/Core'
-#    pod 'NOVAdKit/GDT'
-#    pod 'NOVAdKit/ByteDance'
-#    pod 'NOVAppReview'
+    pod 'NOVAdKit/Core'
+    pod 'NOVAdKit/GDT'
+    pod 'NOVAdKit/ByteDance'
+    pod 'NOVAppReview'
+    pod 'NOVIAP'
 
     pod 'UMCAnalytics'
     pod 'UMCCommonLog', :configurations => ['Debug']
